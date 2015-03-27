@@ -1,0 +1,21 @@
+{
+  "name": "clug",
+  "version": "0.0.0",
+  "description": "Cluster management and logging tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shannonmpoole/clug"
+  },
+  "author": "Shannon Poole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shannonmpoole/clug/issues"
+  },
+  "dependencies": {
+    "winston": "~0.9.0"
+  }
+}
