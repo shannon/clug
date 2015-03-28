@@ -53,12 +53,13 @@ This worker listens on the same address as the master so it will be handled by c
 
 ### API
 
-#### Clug(path:String, [opts:Object])
-* path - path to script, used just like require
-* opts - { logLevel:String, logPath:String, workers:Number, sticky:String|Number|Object}
-  * logLevel - winston logger log level
-  * logPath - directory to put logs into
-  * workers - number of workers to create
-  * sticky - address or addresses to setup sticky sessions for
-    * may be port or socket path
-    * may be object {host, port, path} (node v0.12+)
+#### Clug(path, [opts])
+* path:String - path to script, used just like require
+* opts:Object - options for clug
+  * logLevel:String - winston logger log level
+  * logPath:String - directory to put logs into
+  * workers:Number - number of workers to create
+  * sticky:String|Number|Object|Array - address or addresses to setup sticky sessions for
+    * can be port or socket path
+    * can be object {host, port, path} (node v0.12+)
+    * can be an array of multiple addresses
