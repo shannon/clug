@@ -56,9 +56,9 @@ This worker listens on the same address as the master so it will be handled by c
 #### Clug(path, [opts])
 * path:String - path to script, used just like require
 * opts:Object - options for clug
-  * logLevel:String - winston logger log level
-  * logPath:String - directory to put logs into
-  * workers:Number - number of workers to create
+  * logLevel:String - winston logger log level, defaults to 'debug'
+  * logPath:String - directory to put logs into, defaults to root directory of node app
+  * workers:Number - number of workers to create, defaults to number of cores with a minimum of two
   * sticky:String|Number|Object|Array - address or addresses to setup sticky sessions for
     * can be port or socket path
     * can be object {host, port, path} (node v0.12+)
