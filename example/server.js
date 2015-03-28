@@ -1,7 +1,6 @@
 'use strict';
 
 var http   = require('http')
-  , cluster = require('cluster')
   , config = require('./config')
 ;
 
@@ -11,16 +10,6 @@ var server = http.createServer(function(req, res) {
   res.end('okay');
 });
 
-if(cluster.isMaster){
-  server.listen(config.server.port, function(){
-    console.info('Server listening on port', config.server.port);
-  });
-} else {
-  process.on('message', function(message, connection) {
-    if (message !== 'sticky-session:connection') {
-      return;
-    }
-    server.emit('connection', connection);
-  });
-}
-
+server.listen(config.server.connection, function(){
+  console.info('Server listening on', config.server.connection);
+});

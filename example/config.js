@@ -2,7 +2,7 @@
 
 module.exports = {
   server: {
-    port: 8001,
+    connection: 8001,
     logPath: '/tmp/',
     logLevel: 'silly'
   }
