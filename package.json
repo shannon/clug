@@ -1,6 +1,6 @@
 {
   "name": "clug",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cluster management and logging tool",
   "main": "index.js",
   "repository": {
