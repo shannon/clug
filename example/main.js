@@ -8,4 +8,5 @@ var server = Clug('./server', {
   logLevel: config.server.logLevel,
   logPath: config.server.logPath,
   sticky: config.server.connection,
+  memoryLimit: 25000000
 });
