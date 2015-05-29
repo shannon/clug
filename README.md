@@ -9,6 +9,8 @@ NodeJs Cluster management and logging tool
 * Collects all worker logs in one place
 * Automatically formats logs and writes them to a file
 * Falls back to single process for debugging
+* Monitors memory per worker and restarts worker if limit reached
+* Gracefully closes server connections on shutdown or crash
 
 ### Usage
 
@@ -63,3 +65,4 @@ This worker listens on the same address as the master so it will be handled by c
     * can be port or socket path
     * can be object {host, port, path} (node v0.12+)
     * can be an array of multiple addresses
+  * memoryLimit:Number - number of bytes in memory allowed per worker
